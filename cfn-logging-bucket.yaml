@@ -4,6 +4,16 @@ Resources:
     Type: AWS::S3::Bucket
     Properties:
       AccessControl: LogDeliveryWrite
+      LifecycleConfiguration:
+        Rules:
+        - Id: ExpireRule
+          Status: Enabled
+          Transition:
+            TransitionInDays: 91
+            StorageClass: GLACIER 
+          ExpirationInDays: 2555
+          AbortIncompleteMultipartUpload:
+            DaysAfterInitiation: 7
 Outputs:
   BucketName:
     Value: !Ref 'LoggingBucket'
