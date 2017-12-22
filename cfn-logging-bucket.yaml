@@ -3,6 +3,7 @@ Resources:
   LoggingBucket:
     Type: AWS::S3::Bucket
     Properties:
+      DeletionPolicy: Retain
       AccessControl: LogDeliveryWrite
       LifecycleConfiguration:
         Rules:
