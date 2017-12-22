@@ -16,7 +16,12 @@ Resources:
             DaysAfterInitiation: 7
 Outputs:
   BucketName:
-    Value: !Ref 'LoggingBucket'
+    Value: !Ref LoggingBucket
     Description: A bucket to store logs.
     Export:
       Name: LoggingBucket
+  BucketDomainName:
+    Value: !GetAtt [LoggingBucket, DomainName]
+    Description: DomainName for bucket
+    Export:
+      Name: LoggingBucketDomainName
