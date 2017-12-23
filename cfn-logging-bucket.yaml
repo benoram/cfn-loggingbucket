@@ -3,7 +3,7 @@ Resources:
   LoggingBucket:
     Type: AWS::S3::Bucket
     Properties:
-      DeletionPolicy: Retain
+      BucketName: !Join [ -, [ 'logging', !Ref 'AWS::Region', !Ref 'AWS::AccountId' ]]
       AccessControl: LogDeliveryWrite
       LifecycleConfiguration:
         Rules:
