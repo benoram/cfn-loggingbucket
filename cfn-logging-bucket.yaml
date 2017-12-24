@@ -1,4 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
+Description: S3 and CloudFront logging bucket for region
 Resources:
   LoggingBucket:
     Type: AWS::S3::Bucket
