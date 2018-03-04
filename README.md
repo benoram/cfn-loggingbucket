@@ -5,7 +5,7 @@ Create a bucket to store logs for a region
 If you delete the stack, the logging bucket sticks around. You must manuall delete the log files and the bucket if that is what you really want!
 
 ## Prerequisites
-[AWS CLI](http://docs.aws.amazon.com/rekognition/latest/dg/setup-awscli.html)
+[AWS CLI](https://docs.aws.amazon.com/cli/latest/reference/)
 
 ## Setup
 Run in the GitHub repo dir. This commands below use StackSets to deploy to all regions
